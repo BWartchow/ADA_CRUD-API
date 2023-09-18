@@ -18,7 +18,8 @@ Utilize as extensões do VS Code Sqlite Viewer (para visualização do banco de 
 ### Exemplos de uso:
 #### CREATE
 
-* Adicionar um estudante:
+* Adicionar um estudante:  
+
 Método: Post  
 
 Path: "/students/addStudent"  
@@ -42,7 +43,8 @@ Utilize o body da requisição para passar os dados do estudante:
             "status": 1
         }
 
-* Adicionar um professor:
+* Adicionar um professor:  
+
 Método: Post  
 
 Path: "/professors/addProfessor"  
@@ -70,7 +72,8 @@ Utilize o body da requisição para passar os dados do professor:
             "room": "a"
         }  
 
-* Adicionar um coordenador:
+* Adicionar um coordenador:  
+
 Método: Post  
 
 Path: "/coordinators/addCoordinator"  
@@ -100,34 +103,40 @@ Utilize o body da requisição para passar os dados do coordenador:
 
 #### READ
 
-* Listar todos os dados:
+* Listar todos os dados:  
+
 Método: Get  
 
 Paths: "/students/studentsList", "/professors/professorsList", "/coordinators/coordinatorsList"
 
 Este método não utiliza o body nem o query da requisição.
 
-* Listas baseadas no status da pessoa:
+* Listas baseadas no status da pessoa:  
+
 Método: Get  
 
 Paths: "/students/studentsListByStatus", "/professors/professorsListByStatus", "/coordinators/coordinatorsListByStatus" 
 
 Utilize o query da requisição e passe como Query Parameter e Value:  
 
-Para selecionar usuários inativos:
+Para selecionar usuários inativos:  
+
         status 0
 
-Para selecionar usuários ativos:
+Para selecionar usuários ativos:  
+
         status 1
 
-* Listar os detalhes de pessoa específica:
+* Listar os detalhes de pessoa específica:  
+
 Método: Get  
 
 Paths: "/students/studentDetails", "/professors/professorDetails", "/coordinators/coordinatorDetails" 
 
 Utilize o query da requisição e passe como Query Parameter "id" e como Value o número do id.  
 
-* Listar estudantes e professores por ano e turma:
+* Listar estudantes e professores por ano e turma:  
+
 Método: Get  
 
 Paths: "/students/studentsListByYearAndRoom", "/professors/professorsListByYearAndRoom" 
@@ -137,7 +146,8 @@ Utilize o query da requisição e passe como Query Parameters "year" e "room":
         year 8
         room a
 
-* Listar estudantes por média maior ou igual que determinado valor:
+* Listar estudantes por média maior ou igual que determinado valor:  
+
 Método: Get  
 
 Path: "/students/studentsListByAverage" 
@@ -146,7 +156,8 @@ Utilize o query da requisição e passe como Query Parameter a "gradePointAverag
 
         gradePointAverage 8.5
 
-* Listar professores por matéria:
+* Listar professores por matéria:  
+
 Método: Get  
 
 Path: "/professors/professorsListBySubject" 
@@ -155,7 +166,8 @@ Utilize o query da requisição e passe como Query Parameter a "subject":
 
         subject portuguese
 
-* Listar coordenadores por projeto principal:
+* Listar coordenadores por projeto principal:  
+
 Método: Get  
 
 Path: "/coordinators/coordinatorsListByMainProject" 
@@ -167,7 +179,8 @@ Utilize o query da requisição e passe como Query Parameter a "subject":
 
 #### UPDATE
 
-* Atualizar todos os dados de um estudante:
+* Atualizar todos os dados de um estudante:  
+
 Método: Put  
 
 Path: "/students/updateStudent"  
@@ -192,7 +205,8 @@ Utilize o body da requisição para passar os dados do estudante, inclusive o id
             "status": 1
         }
 
-* Atualizar todos os dados de um professor:
+* Atualizar todos os dados de um professor:  
+
 Método: Put  
 
 Path: "/professors/updateProfessor"  
@@ -221,7 +235,8 @@ Utilize o body da requisição para passar os dados do professor, inclusive o id
             "room": "b"
         }
 
-* Atualizar todos os dados de um coordenador:
+* Atualizar todos os dados de um coordenador:  
+
 Método: Put  
 
 Path: "/coordinators/updateCoordinator"  
@@ -250,7 +265,8 @@ Utilize o body da requisição para passar os dados do coordenador, inclusive o 
             "mainProject": "Modern Teaching Methods"
         }
 
-* Atualizar as notas de um estudante:
+* Atualizar as notas de um estudante:  
+
 Método: Patch  
 
 Path: "/students/updateStudentsGrades"  
@@ -264,7 +280,8 @@ Utilize o body da requisição para passar as notas do estudante, incluindo o id
             "gradePoint3": 10
         }
 
-* Atualizar a folha de pagamento de um profissional:
+* Atualizar a folha de pagamento de um profissional:  
+
 Método: Patch  
 
 Paths: "/professors/updateProfessorsPayroll", "/coordinators/updateCoordinatorsPayroll"  
@@ -277,7 +294,8 @@ Utilize o body da requisição para passar carga horária e salário do profissi
             "salary": 5000
         }
 
-* Atualizar o status de pessoa específica:
+* Atualizar o status de pessoa específica:  
+
 Método: Patch  
 
 Paths: "/students/updateStudentsStatus", "/professors/updateProfessorStatus", "/coordinators/updateCoordinatorStatus"  
@@ -291,7 +309,8 @@ Utilize o body da requisição e passe o id e o status desejado (0 = inativo, 1 
 
 #### DELETE
 
-* Deletar uma pessoa específica:
+* Deletar uma pessoa específica:  
+
 Método: Delete  
 
 Paths: "/students/deleteStudent", "/professors/deleteProfessor", "/coordinators/deleteCoordinator"  
